@@ -10,9 +10,6 @@
           <li class="mr-8">
             <g-link to="/#about" class="hover:text-gray-600">About</g-link>
           </li>
-          <li class="mr-8">
-            <g-link to="/#contact" class="hover:text-gray-600">Contact</g-link>
-          </li>
           <li>
             <g-link to="/blog" class="hover:text-gray-600">Blog</g-link>
           </li>
