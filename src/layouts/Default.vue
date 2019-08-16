@@ -20,7 +20,7 @@
       </nav>
     </header>
 
-    <div class="flex-grow">
+    <div class="flex-grow flex justify-center">
       <slot></slot>
     </div>
 
