@@ -5,7 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'jradtilbrook.dev',
+  siteDescription: "jradtilbrook's personal website and blog.",
+  siteUrl: 'https://jradtilbrook.dev',
+
   plugins: [],
   chainWebpack: config => {
     config.module
