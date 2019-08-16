@@ -2,7 +2,7 @@
   <div class="font-sans text-gray-800 leading-normal flex flex-col min-h-screen">
     <header class="border-t-14 border-blue-700">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
-        <g-link to="/"><div class="uppercase tracking-wide font-bold">jradtilbrook</div></g-link>
+        <g-link class="uppercase tracking-wide font-bold text-xl" to="/">jradtilbrook</g-link>
         <ul class="uppercase tracking-wide font-bold flex flex-initial items-center">
           <li class="mr-8">
             <g-link to="/#projects" class="hover:text-gray-600">Projects</g-link>
