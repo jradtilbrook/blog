@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout className="flex justify-center">
     <div class="flex flex-row items-center">
       <div class="container mx-auto text-center">
         <h2 class="text-6xl font-bold mb-4">404</h2>
