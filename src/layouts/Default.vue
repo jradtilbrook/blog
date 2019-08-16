@@ -20,7 +20,7 @@
       </nav>
     </header>
 
-    <div class="flex-grow">
+    <div class="flex-grow" :class="className">
       <slot></slot>
     </div>
 
@@ -51,6 +51,12 @@ query {
   }
 }
 </static-query>
+
+<script>
+export default {
+  props: ['className'],
+}
+</script>
 
 <style>
 @tailwind base;
