@@ -17,6 +17,7 @@ module.exports = {
       .use('postcss-loader')
       .tap(options => {
         options.plugins.push(require('tailwindcss')())
+        options.plugins.push(require('postcss-nested')())
         return options
       })
   },
