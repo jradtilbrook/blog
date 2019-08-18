@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans text-gray-800 leading-normal flex flex-col min-h-screen">
+  <div class="font-sans antialiased bg-gray-100 text-gray-700 leading-normal flex flex-col min-h-screen">
     <header class="border-t-14 border-blue-700">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <g-link class="uppercase tracking-wide font-bold text-xl" to="/">jradtilbrook</g-link>
@@ -57,10 +57,6 @@ export default {
 
 <style>
 @tailwind base;
-
-body {
-    @apply antialiased;
-}
 
 @tailwind components;
 
