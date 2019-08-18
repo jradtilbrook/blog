@@ -1,15 +1,26 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 module.exports = {
   siteName: 'jradtilbrook.dev',
   siteDescription: "jradtilbrook's personal website and blog.",
   siteUrl: 'https://jradtilbrook.dev',
 
-  plugins: [],
+  plugins: [
+    {
+      // create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Post',
+        path: 'blog/*.md',
+        route: '/blog/:year/:month/:day/:slug',
+        remark: {
+          externalLinksTarget: '_self',
+          plugins: [
+            '@gridsome/remark-prismjs',
+          ],
+        },
+      },
+    },
+  ],
+  // run postcss with the tailwind plugin
   chainWebpack: config => {
     config.module
       .rule('css')
