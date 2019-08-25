@@ -5,7 +5,7 @@
       <div class="text-gray-600 mb-4">{{ $page.post.date }} &bull; {{ $page.post.timeToRead }} min</div>
       <div class="markdown-body mb-8 text-xl" v-html="$page.post.content" />
       <div class="mb-8">
-        <g-link to="/blog" class="font-bold uppercase">Back to Blog</g-link>
+        <g-link to="/blog" class="font-bold uppercase text-blue-700 hover:text-blue-800">Back to Blog</g-link>
       </div>
     </div>
   </Layout>
@@ -14,10 +14,10 @@
 <page-query>
 query Post ($path: String!) {
   post: post (path: $path) {
-    title
     content
-    date(format: "MMM D, Y")
+    date (format: "MMMM D, Y")
     timeToRead
+    title
   }
 }
 </page-query>
@@ -49,9 +49,9 @@ export default {
   }
 
   a {
-    @apply text-blue-700 underline;
+    @apply text-blue-700;
     &:hover {
-      @apply text-blue-900;
+      @apply text-blue-800;
     }
   }
 
