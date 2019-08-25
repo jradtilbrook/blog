@@ -1,14 +1,14 @@
 <template>
   <Layout>
     <div class="container mx-auto my-16 xl:w-2/5 w-1/2">
-      <div v-for="post in $page.posts.edges" :key="post.id" class="bg-white border border-grey-400 rounded-lg mb-12 h-64">
-        <h2 class="text-3xl font-bold mx-6 my-3">
-          <g-link :to="post.node.path">{{ post.node.title }}</g-link>
+      <div v-for="post in $page.posts.edges" :key="post.id" class="bg-white shadow rounded-lg mb-12 min-h-56 p-6">
+        <h2 class="text-3xl font-bold">
+          <g-link class="hover:text-blue-700" :to="post.node.path">{{ post.node.title }}</g-link>
         </h2>
-        <div class="mx-6 my-3">
-          <span>{{ post.node.date }} &bull; {{ post.node.timeToRead }} mins</span>
+        <div class="text-gray-600 text-sm my-3">
+          <span>{{ post.node.date }} &bull; {{ post.node.timeToRead }} min</span>
         </div>
-        <div class="text-lg mx-6">{{ post.node.description }}</div>
+        <div class="text-lg">{{ post.node.summary }}</div>
       </div>
     </div>
   </Layout>
@@ -24,12 +24,12 @@ query Posts ($page: Int) {
     }
     edges {
       node {
+        date (format: "MMMM D, Y")
+        summary
         id
-        title
-        description
-        date(format: "Y-M-d")
         path
         timeToRead
+        title
       }
     }
   }
