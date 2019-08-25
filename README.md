@@ -1,14 +1,4 @@
-# Default starter for Gridsome
+# My personal website [![Netlify Status](https://api.netlify.com/api/v1/badges/2ef724d0-6382-499d-95d6-03526527f140/deploy-status)](https://app.netlify.com/sites/jradtilbrookdev/deploys)
 
-This is the project you get when you run `gridsome create new-project`.
-
-### 1. Install Gridsome CLI tool if you don't have
-
-`npm install --global @gridsome/cli`
-
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+Built with [Gridsome](https://gridsome.org/).  
+Deployed with [Netlify](https://netlify.com) at [jradtilbrook.dev](https://jradtilbrook.dev).
