@@ -9,7 +9,11 @@ module.exports = {
   siteDescription: "jradtilbrook's personal website and blog.",
   siteUrl: 'https://jradtilbrook.dev',
 
-  plugins: [],
+  plugins: [
+    {
+      use: 'gridsome-plugin-purgecss',
+    },
+  ],
   chainWebpack: config => {
     config.module
       .rule('css')
