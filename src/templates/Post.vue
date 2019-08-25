@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <div class="container mx-auto my-16 mardkown xl:w-2/5 w-1/2">
-      <h1 class="text-4xl font-bold leading-tight">{{ $page.post.title }}</h1>
-      <div class="text-xl text-gray-600 mb-4">{{ $page.post.date }}</div>
+      <h1 class="text-4xl font-bold leading-tight mb-2">{{ $page.post.title }}</h1>
+      <div class="text-gray-600 mb-4">{{ $page.post.date }} &bull; {{ $page.post.timeToRead }} min</div>
       <div class="markdown-body mb-8 text-xl" v-html="$page.post.content" />
       <div class="mb-8">
         <g-link to="/blog" class="font-bold uppercase">Back to Blog</g-link>
@@ -16,6 +16,8 @@ query Post ($path: String!) {
   post: post (path: $path) {
     title
     content
+    date(format: "MMM D, Y")
+    timeToRead
   }
 }
 </page-query>
@@ -35,11 +37,15 @@ export default {
   @apply text-gray-700 leading-relaxed;
 
   > * + * {
-    @apply mt-16;
+    @apply mt-12;
   }
 
-  h1 {
-    @apply text-3xl font-bold text-gray-900 leading-tight;
+  h2 {
+    @apply text-xl font-bold leading-tight;
+  }
+
+  h2 + p {
+    @apply mt-4;
   }
 
   a {
@@ -59,6 +65,10 @@ export default {
 
   pre {
     @apply mt-16 rounded-lg;
+  }
+
+  blockquote {
+    @apply opacity-65;
   }
 }
 </style>
